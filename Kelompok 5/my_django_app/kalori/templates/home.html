@@ -1,0 +1,93 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container mt-4">
+  <div class="card-group">
+
+    <div class="card me-3">
+      <img src="{% static 'images/obesitas.jpg' %}" class="card-img-top" alt="Dampak Obesitas">
+      <div class="card-body">
+        <h5 class="card-title">Dampak Obesitas pada Kesuburan Pria & Wanita</h5>
+        <p class="card-text">Obesitas adalah kelebihan berat badan yang ditentukan oleh Indeks Massa Tubuh (IMT). IMT dapat tidak akurat untuk individu berotot, seperti atlet, karena tidak mengukur kadar lemak tubuh secara langsung. Mereka bisa dianggap obes meski tidak memiliki kelebihan lemak.</p>
+        <p>Penyebab dan Faktor Risiko Obesitas:</p>
+        <ul>
+          <li>Faktor genetik dan kebiasaan dalam keluarga</li>
+          <li>Pola makan yang tidak sehat</li>
+          <li>Kurang atau tidak beraktivitas fisik</li>
+          <li>Adanya penyakit tertentu</li>
+          <li>Obat-obatan</li>
+          <li>Kurang tidur</li>
+          <li>Stres</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card me-3">
+      <img src="{% static 'images/kalori.jpg' %}" class="card-img-top" alt="Menghitung Kalori">
+      <div class="card-body">
+        <h5 class="card-title">Menghitung Kalori Makanan agar Memiliki Berat Badan Ideal</h5>
+        <p class="card-text">Kalori adalah satuan energi untuk mengukur kandungan energi makanan. Keseimbangan kalori penting untuk fungsi tubuh; kelebihan atau kekurangan dapat berbahaya. Menghitung kalori penting saat diet untuk mencapai berat badan ideal dan meningkatkan peluang kehamilan. Mengetahui kebutuhan kalori harian sangat penting.</p>
+        <p>Cara Menghitung Kalori Makanan:</p>
+        <ul>
+          <li>Membaca nilai informasi gizi makanan</li>
+          <li>Memperhatikan jumlah karbohidrat, protein, dan lemak</li>
+          <li>Menimbang dan mengukur porsi makanan Anda</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card me-3">
+      <img src="{% static 'images/berat badan.jpg' %}" class="card-img-top" alt="Menurunkan Berat Badan">
+      <div class="card-body">
+        <h5 class="card-title">Cara Menurunkan Berat Badan yang Ampuh untuk Mendapatkan ‘Body Goals’</h5>
+        <p class="card-text">Kelebihan berat badan umum terjadi, terutama pada wanita yang sering memilih diet untuk bentuk tubuh ideal. Namun, diet ekstrem tidak disarankan. Kunci penurunan berat badan yang sehat adalah pola hidup sehat, termasuk diet seimbang dan olahraga teratur.</p>
+        <p>Cara Menurunkan Berat Badan dengan Cepat dan Sehat:</p>
+        <ul>
+          <li>Jangan lewatkan sarapan</li>
+          <li>Rajin olahraga</li>
+          <li>Kontrol porsi makan</li>
+          <li>Banyak minum air putih</li>
+          <li>Konsumsi lebih banyak serat</li>
+          <li>Tidur yang cukup</li>
+          <li>Kontrol stres</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <hr>
+
+  <div class="card">
+    <div class="card-header">
+      <h5>Metode Penghitungan Kebutuhan Kalori Harian</h5>
+    </div>
+    <div class="card-body">
+      <blockquote class="blockquote mb-0">
+        <h5 class="card-title">Kebutuhan kalori anda diukur dengan menggunakan rumus Mifflin St. Jeor:</h5>
+        <p class="card-text">
+          BMR (Basal Metabolic Rate) adalah jumlah kalori yang dibutuhkan untuk melakukan aktivitas minimum seperti bernafas.<br>
+          Kalkulator ini menghitung BMR menggunakan rumus Mifflin St. Jeor sebagai berikut.
+        </p>
+        <ul>
+          <li><strong>BB</strong>: Berat badan Anda dalam Kilogram (Kg)</li>
+          <li><strong>TB</strong>: Tinggi badan Anda dalam centimeter (cm)</li>
+          <li><strong>U</strong>: Umur dalam satuan Tahun</li>
+        </ul>
+        <p class="card-text justify-content-center">
+          Kebutuhan Kalori Harian (TDEE) adalah total kalori yang Anda butuhkan dalam melakukan aktivitas sehari-hari.<br>
+          Mifflin St. Jeor mengelompokkan TDEE ke dalam beberapa kategori sebagai berikut.
+        </p>
+      </blockquote>
+      <ul>
+        <li><strong>Pengali TDEE 1.2</strong>: Minimal bergerak atau kerja kantoran</li>
+        <li><strong>Pengali TDEE 1.375</strong>: Aktivitas ringan, olahraga 1-2 kali/minggu</li>
+        <li><strong>Pengali TDEE 1.55</strong>: Aktivitas sedang, olahraga 3-5 kali/minggu</li>
+        <li><strong>Pengali TDEE 1.725</strong>: Aktivitas berat, olahraga 6-7 kali/minggu</li>
+        <li><strong>Pengali TDEE 1.9</strong>: Aktivitas ekstrim, olahraga 2 kali sehari atau lebih</li>
+      </ul>
+    </div>
+  </div>
+</div>
+{% endblock %}

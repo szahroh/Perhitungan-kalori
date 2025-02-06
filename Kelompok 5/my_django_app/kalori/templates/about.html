@@ -1,0 +1,87 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block content %}
+
+<style>
+  .profile-image {
+    width: 120px; 
+    height: 120px; 
+    object-fit: cover; 
+    margin: 0 auto; 
+    display: block; 
+    border-radius: 5px; 
+  }
+  
+  .profile-info {
+    text-align: center; 
+    margin: 20px 0; 
+    color: white;
+  }
+
+  .background {
+    position: relative; 
+    background-image: url({% static 'images/kelompok.jpg' %}); 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    background-position: 10px; 
+  }
+
+  .background::before {
+    content: ''; 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0; 
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 1;
+  }
+
+  .content {
+    position: relative; 
+    z-index: 2; 
+    padding: 150px; 
+    color: white;
+  }
+</style>
+
+<div class="background">
+  <div class="content">
+    <h2 style="text-align: center; font-family: 'Lobster', cursive; font-size: 36px;">TEAM</h2>
+    <div class="row mb-4 justify-content-center">
+      <div class="col-md-3 profile-info">
+        <img src="{% static 'images/silvia.jpg' %}" class="profile-image" alt="Silvia Zahrodiniah">
+        <h5>Silvia Zahrodiniah</h5>
+        <p>0110224019</p>
+      </div>
+    
+      <div class="col-md-3 profile-info">
+        <img src="{% static 'images/rumaisa.jpg' %}" class="profile-image" alt="Rumaisha">
+        <h5>Rumaisha</h5>
+        <p>0110224087</p>
+      </div>
+    
+      <div class="col-md-3 profile-info">
+        <img src="{% static 'images/el.jpg' %}" class="profile-image" alt="Yanti Elnaya Putri">
+        <h5>Yanti Elnaya Putri</h5>
+        <p>0110224097</p>
+      </div>
+    </div>
+    
+    <div class="row justify-content-center">
+      <div class="col-md-3 profile-info">
+        <img src="{% static 'images/iman.jpg' %}" class="profile-image" alt="Muhamad Iman">
+        <h5>Muhamad Iman</h5>
+        <p>0110224218</p>
+      </div>
+    
+      <div class="col-md-3 profile-info">
+        <img src="{% static 'images/hafiz.jpg' %}" class="profile-image" alt="M. Hafiz Zalfa Al-Gifari">
+        <h5>M. Hafiz Zalfa Al-Gifari</h5>
+        <p>0110224179</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

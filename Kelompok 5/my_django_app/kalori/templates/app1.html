@@ -1,0 +1,52 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <h3 class="mb-4">Menghitung Kebutuhan Kalori Harian</h3>
+    <form method="POST" action="{% url 'hitung_kebutuhan_kalori' %}">
+        {% csrf_token %}
+        
+        <div class="mb-2">
+            <label for="nama" class="form-label">Nama:</label>
+            <input type="text" class="form-control" id="nama" name="nama" required>
+        </div>
+
+        <div class="mb-2">
+            <label for="berat_badan" class="form-label">Berat Badan (kg):</label>
+            <input type="number" class="form-control" id="berat_badan" name="berat_badan" required>
+        </div>
+
+        <div class="mb-2">
+            <label for="tinggi_badan" class="form-label">Tinggi Badan (cm):</label>
+            <input type="number" class="form-control" id="tinggi_badan" name="tinggi_badan" required>
+        </div>
+
+        <div class="mb-2">
+            <label for="usia" class="form-label">Usia (tahun):</label>
+            <input type="number" class="form-control" id="usia" name="usia" required>
+        </div>
+
+        <div class="mb-2">
+            <label for="jenis_kelamin" class="form-label">Jenis Kelamin:</label>
+            <select class="form-select" id="jenis_kelamin" name="jenis_kelamin" required>
+                <option value="Laki-laki">Laki-laki</option>
+                <option value="Perempuan">Perempuan</option>
+            </select>
+        </div>
+
+        <div class="mb-2">
+            <label for="aktivitas" class="form-label">Aktivitas Harian:</label>
+            <select class="form-select" id="aktivitas" name="aktivitas" required>
+                <option value="Tidak Banyak Bergerak">Minimal, Suka Rebahan</option>
+                <option value="Aktif Ringan">Aktivitas Ringan, Olahraga 1-3 kali/minggu</option>
+                <option value="Cukup Aktif">Aktivitas Menengah, Olahraga 3-5 kali/minggu</option>
+                <option value="Sangat Aktif">Aktivitas Berat, Olahraga 6-7 kali/minggu</option>
+                <option value="Sangat - sangat Aktif">Pekerja Fisik, Olahraga 2 kali/hari</option>
+            </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Hitung Kalori</button>
+    </form>
+</div>
+<br>
+{% endblock %}

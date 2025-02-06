@@ -1,0 +1,46 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<h4>Hasil Perhitungan Kebutuhan Kalori</h4>
+
+<div class="d-flex justify-content-center">
+    <table class="table table-striped text-center" style="width: 50%;">
+        <tr>
+            <td>Nama</td>
+            <td>{{ hasil_kalori.nama }}</td>
+        </tr>
+        <tr>
+            <td>Tinggi Badan</td>
+            <td>{{ hasil_kalori.tinggi_badan }}</td>
+        </tr>
+        <tr>
+            <td>Berat Badan</td>
+            <td>{{ hasil_kalori.berat_badan }}</td>
+        </tr>
+        <tr>
+            <td>Usia</td>
+            <td>{{ hasil_kalori.usia }}</td>
+        </tr>
+        <tr>
+            <td>Jenis Kelamin</td>
+            <td>{{ hasil_kalori.jenis_kelamin }}</td>
+        </tr>
+        <tr>
+            <td>Aktivitas Harian</td>
+            <td>{{ hasil_kalori.aktivitas }}</td>
+        </tr>
+        <tr>
+            <td>BMR</td>
+            <td>{{ hasil_kalori.bmr }}</td>
+        </tr>
+        <tr>
+            <td>Kebutuhan Kalori Total</td>
+            <td>{{ hasil_kalori.kebutuhan_kalori }}</td>
+        </tr>
+    </table>
+</div>
+<div class="text-center mt-3">
+    <a href="{% url 'hitung_kebutuhan_kalori' %}" class="btn btn-primary">Hitung Lagi</a>
+</div>
+<br>
+{% endblock %}

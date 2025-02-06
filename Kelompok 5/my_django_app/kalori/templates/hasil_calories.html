@@ -1,0 +1,42 @@
+{% extends 'index.html' %}
+{% block content %}
+<h4>Kalori yang Terbakar</h4>
+
+<div class="d-flex justify-content-center">
+    <table class="table table-striped text-center" style="width: 50%;">
+        <tr>
+            <td>Nama</td>
+            <td>{{ slip_calories.nama }}</td>
+        </tr>
+        <tr>
+            <td>Berat Badan</td>
+            <td>{{ slip_calories.berat_badan }}</td>
+        </tr>
+        <tr>
+            <td>Tinggi Badan</td>
+            <td>{{ slip_calories.tinggi_badan }}</td>
+        </tr>
+        <tr>
+            <td>Usia</td>
+            <td>{{ slip_calories.usia }}</td>
+        </tr>
+        <tr>
+            <td>Jam Olahraga</td>
+            <td>{{ slip_calories.jam_olahraga }}</td>
+        </tr>
+        <tr>
+            <td>Jenis Olahraga</td>
+            <td>{{ slip_calories.jenis_olahraga }}</td>
+        </tr>
+        <tr>
+            <td>Total Kalori yang Terbakar</td>
+            <td>{{ slip_calories.kalori_dibakar }}</td>
+        </tr>
+    </table>
+</div>
+
+<div class="text-center mt-3">
+    <a href="{% url 'hitung_kebutuhan_kalori' %}" class="btn btn-primary">Hitung Lagi</a>
+</div>
+<br>
+{% endblock %}
